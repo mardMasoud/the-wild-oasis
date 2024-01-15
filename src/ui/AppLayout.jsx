@@ -8,9 +8,18 @@ const StyledAppLayout = styled.div`
     grid-template-columns: 26rem 1fr;
     grid-template-rows: auto 1fr;
 `;
+
 const Main = styled.main`
     background-color: var(--color-grey-50);
     padding: 4rem 4.8rem 6.4rem;
+    overflow: scroll;
+`;
+const Container = styled.div`
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
 `;
 export default function AppLayout() {
     return (
@@ -18,7 +27,9 @@ export default function AppLayout() {
             <Header />
             <Sidebar />
             <Main>
-                <Outlet />
+                <Container>
+                    <Outlet />
+                </Container>
             </Main>
         </StyledAppLayout>
     );
