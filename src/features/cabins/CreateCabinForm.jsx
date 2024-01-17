@@ -35,7 +35,7 @@ function CreateCabinForm() {
     function onError(err) {
         console.log(err.message);
     }
-    if (isCreating) return <Spinner />;
+    // if (isCreating) return <Spinner />;
     return (
         <Form onSubmit={handleSubmit(onSubmit, onError)}>
             <FormRow label="Cabin name" error={errors?.name?.message}>
